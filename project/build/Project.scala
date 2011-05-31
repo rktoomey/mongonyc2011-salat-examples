@@ -6,7 +6,8 @@ class SampleProject(info: ProjectInfo) extends DefaultProject(info) {
     
      val salat = "com.novus" %% "salat-core" % "0.0.8-SNAPSHOT"
      val specs2 = "org.specs2" %% "specs2" % "1.4-SNAPSHOT"  
-     
+     val slf4jSimple = "org.slf4j" % "slf4j-simple" % "1.6.0" % "test->default"
+
      def specs2Framework = new TestFramework("org.specs2.runner.SpecsFramework")
      override def testFrameworks = super.testFrameworks ++ Seq(specs2Framework)
 
